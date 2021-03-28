@@ -1,0 +1,126 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    margin: 30px;
+}
+
+.text-container {
+    width: 50%;
+    margin: auto;
+    text-align: center;
+    margin-bottom: 80px;
+}
+
+.text-container p {
+    color: gray;
+}
+
+
+.text-container .light {
+    font-weight: 200;
+    color: gray;
+}
+
+
+.grid {
+    display: grid;
+    grid-template-rows: repeat(2, 1fr) ;
+    grid-template-columns: repeat(3, 1fr) ;
+    grid-template-areas:  "supervisor builder calculator"
+                          "supervisor karma   calculator";
+    gap: 20px;
+    align-items:center;
+    justify-items: center;
+}
+
+body {
+    background-color: hsl(0, 0%, 98%);
+}
+
+
+.supervisor {
+    grid-area: supervisor;
+}
+
+.builder {
+    grid-area: builder;
+}
+
+.karma {
+    grid-area: karma;
+}
+
+.calculator {
+    grid-area: calculator;
+}
+
+
+.box {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    padding: 30px;
+    width: 100%;
+    height: 300px;
+    border-radius: 5px;
+    box-shadow: 5px 5px 30px 0px hsl(229, 6%, 66%);
+}
+
+.box p {
+    color: lightgray;
+}
+
+.box img {
+    flex-basis: 50px;
+    align-self: flex-end;
+    bottom: 30px;
+    right: 30px;
+    position: absolute;
+}
+
+.red {
+    border-top: 6px solid hsl(0, 78%, 62%);
+}
+
+.cyan {
+    border-top: 6px solid hsl(180, 62%, 55%);
+}
+
+.orange {
+    border-top: 6px solid hsl(34, 97%, 64%);
+}
+
+.blue {
+    border-top: 6px solid hsl(212, 86%, 64%);
+}
+
+@media (max-width:768px) {
+    .grid {
+        grid-template-areas:  "supervisor   supervisor supervisor"
+                              "builder      builder    builder"
+                              "karma        karma       karma"
+                              "calculator   calculator  calculator";
+    }
+    
+    .text-container {
+        width: 100%;
+        
+    }
+
+    .text-container h1 {
+        font-size: 26px;;
+    }
+
+    .text-container p {
+        font-size: 15px;
+        font-weight: 200;
+        margin-top: 20px;
+    }
+}
